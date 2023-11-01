@@ -2,9 +2,9 @@
 
 import qrcode
 
-ssid = "Matheus-5G"
-password = "11121994"
-security = "WPA" 
+ssid = "nomedaredeaqui"
+password = "senhaaqui"
+security = "WPA" # WPA, WEP ou "" para redes sem segurança
 
 wifi_data = f"WIFI:T:{security};S:{ssid};P:{password};;"
 
