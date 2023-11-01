@@ -10,9 +10,8 @@ def inicio():
 
 @app.route('/criar', methods=['POST'])
 def criar():
-
+    
     # hidden_ssid = request.form['hidden-ssid'] # Adicionar depois
-
     ssid = request.form['ssid']
     password = request.form['password']
     security = request.form['security']
