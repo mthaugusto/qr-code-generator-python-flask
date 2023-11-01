@@ -1,51 +1,47 @@
-<h1>Documentação do Código QR Code para Conexão Wi-Fi</h1>
+<h1>Gerador de QR Code Wi-Fi com Flask</h1>
 
-<h2>Visão Geral</h2>
-Este código Python demonstra como criar um código QR (Quick Response) para facilitar a configuração de uma conexão Wi-Fi em dispositivos móveis. 
-
-O código QR contém as informações de conexão, como o nome da rede Wi-Fi (SSID), a senha e o tipo de segurança (WEP, WPA ou sem segurança).
+Este é um aplicativo web simples que permite gerar códigos QR para redes Wi-Fi. Os códigos QR contêm informações de rede, como SSID, senha e protocolo de segurança, para facilitar a conexão de dispositivos a redes Wi-Fi.
 
 <h2>Pré-requisitos</h2>
-Para executar este código, você precisa ter a seguinte biblioteca instalada no seu ambiente Python: qrcode.
 
-Esta biblioteca é usada para gerar o código QR. Você pode instalá-la usando o pip: pip install qrcode
+Antes de executar o aplicativo, você precisará ter o Python e as seguintes bibliotecas instaladas:
+- Flask
+- qrcode
+
+Você pode instalá-los usando o seguinte comando: pip install Flask qrcode
+
+<h2>Executando o aplicativo:</h2>
+Clone este repositório: git clone https://github.com/seu-nome/gerador-qr-code-wifi-flask.git
+Navegue até o diretório do projeto: cd gerador-qr-code-wifi-flask
+Inicie o aplicativo: python app.py
+
+O aplicativo estará disponível em http://127.0.0.1:5000/ em seu navegador.
 
 <h2>Uso</h2>
 
-Configure as informações da conexão Wi-Fi, preenchendo as variáveis ssid, password e security com os detalhes apropriados. O formato das informações de conexão Wi-Fi é definido na variável:
-
-wifi_data = f"WIFI:T:{security};S:{ssid};P:{password};;
-
-
-security: o tipo de segurança da rede Wi-Fi (WEP, WPA, ou sem segurança).
-ssid: o nome da rede Wi-Fi (SSID).
-password: a senha da rede Wi-Fi.
-
-<h2>Um objeto QRCode é inicializado com os parâmetros necessários, como a versão, nível de correção de erro, tamanho da caixa e borda.</h2>
-
-A versão - o tamanho do QR - pode ir de 1 a 40.
-
-O nível de correção de erro, que é o valor do QR Code que pode estar danificado e ainda sim possibilitar a sua leitura, vai de: L (7% ou menos de erros) | M (15% ou menos de erros) | Q (25% ou menos de erros) | H (30% ou menos de erros).
-
-Tamanho da caixa - é o tamanho dos quadros/células do QR Code.
-
-Borda - a borda ao redor do QR Code.
-
-<h2>As informações de conexão Wi-Fi são adicionadas ao código QR.</h2>
-
-<h2>O código QR é gerado e configurado com cores de preenchimento e fundo - que podem ser inseridas no formato de string ou tuplas RGB.</h2>
-
-<h2>A imagem do código QR é salva em um arquivo chamado "qrcode_wifi.png".</h2>
-  
-<h2>O código QR é exibido na tela.</h2>
-
-*** 
+Abra o aplicativo no navegador.
+Preencha as informações da rede Wi-Fi, incluindo SSID, senha e protocolo de segurança.
+Escolha o protocolo de segurança entre WPA, WEP ou None.
+Clique no botão "GENERATE" para gerar o código QR.
+O código QR gerado será exibido na página e salvo como qrcode_wifi.png no diretório static.
 
 <h2>Personalização</h2>
-Você pode personalizar a aparência do código QR alterando os parâmetros passados para o objeto qr. Por exemplo, você pode modificar as cores de preenchimento e fundo, o tamanho da caixa e a borda de acordo com suas preferências.
+Você pode personalizar o aplicativo da seguinte forma:
 
-<h2>Notas Importantes</h2>
-Certifique-se de manter as informações de conexão Wi-Fi seguras, uma vez que elas podem ser lidas facilmente no código QR gerado.
+Altere o título do aplicativo em app.py no método inicio().
+Personalize atributos do QR Code como o tamanho, borda, correção de erro (quantos % do QR Code pode estar danificado para ele ainda sim ser legível) e outros.
+Personalize o estilo da página HTML em static/styles.css.
 
-Você pode compartilhar o código QR com dispositivos móveis para facilitar a configuração da conexão Wi-Fi, o que é especialmente útil ao configurar dispositivos IoT.
+<h2>Contribuições</h2>
+Contribuições são bem-vindas! Se você encontrar problemas ou tiver melhorias para sugerir, sinta-se à vontade para abrir uma solicitação de pull.
 
+<h2>Autor</h2>
+Matheus Leite
+
+<h2>Projeto Figma</h2>
+Bianca Nannini
+
+<h2>Documentaçoes</h2>
+
+Flask: https://flask.palletsprojects.com/
+qrcode: https://pypi.org/project/qrcode/
