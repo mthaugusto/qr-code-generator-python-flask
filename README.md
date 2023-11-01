@@ -30,6 +30,7 @@ Você pode personalizar o aplicativo da seguinte forma:
 
 - Altere o título do aplicativo em app.py no método inicio().
 - Personalize atributos do QR Code como o version (tamanho do QR Code, vai de 1 a 40), borda (de 1 a 10), correção de erro (quantos % do QR Code pode estar danificado para ele ainda sim ser legível - sendo L para low, M para medium, Q para quartile e H para high) e o box size (tamanho dos quadrantes).
+- Personaliza as cores do seu QR Code com strings ou tuplas RGB.
 - Personalize o estilo da página HTML em static/styles.css.
 
 <h2>Contribuições</h2>
