@@ -44,4 +44,5 @@ Bianca Nannini
 <h2>Documentaçoes</h2>
 
 Flask: https://flask.palletsprojects.com/
+
 qrcode: https://pypi.org/project/qrcode/
